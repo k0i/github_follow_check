@@ -1,0 +1,20 @@
+on:
+  schedule:
+    - cron: "0 1 * * *"
+
+name: github_relationship
+
+jobs:
+  check:
+    name: github_relationship
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo |  ./bin ${{ github.actor }}
+      - name: commit README
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git add README.md
+          git commit -m 'update README.md'
+          git push origin master
