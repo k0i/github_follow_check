@@ -1,9 +1,10 @@
 use std::{
+    error::Error,
     fs::File,
     io::{LineWriter, Write},
 };
 
-use reqwest::{header, ClientBuilder};
+use reqwest::{header, Client, ClientBuilder};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
@@ -21,44 +22,22 @@ async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
         .default_headers(headers)
         .build()
         .expect("Failed to build client");
-    let mut page = 1;
-    let mut followers = vec![];
-    loop {
-        let follower_up_to_100 = client
-            .get(format!(
-                "https://api.github.com/users/{}/followers",
-                user_name
-            ))
-            .query(&[("page", page), ("per_page", 100)])
-            .send()
-            .await?
-            .json::<Vec<User>>()
-            .await?;
-        if follower_up_to_100.is_empty() {
-            break;
+    let followers = match fetch_followers(&user_name, &client).await {
+        Ok(followers) => followers,
+        Err(e) => {
+            println!("Failed to fetch followers: {}", e);
+            return Ok(());
         }
-        followers.extend(follower_up_to_100);
-        page += 1;
-    }
-    let mut page = 1;
-    let mut following = vec![];
-    loop {
-        let following_up_to_100 = client
-            .get(format!(
-                "https://api.github.com/users/{}/following",
-                user_name
-            ))
-            .query(&[("page", page), ("per_page", 100)])
-            .send()
-            .await?
-            .json::<Vec<User>>()
-            .await?;
-        if following_up_to_100.is_empty() {
-            break;
+    };
+
+    let following = match fetch_followings(&user_name, &client).await {
+        Ok(following) => following,
+        Err(e) => {
+            println!("Failed to fetch followings: {}", e);
+            return Ok(());
         }
-        following.extend(following_up_to_100);
-        page += 1;
-    }
+    };
+
     let mut following_set = std::collections::HashSet::new();
     for user in following {
         following_set.insert((user.login, user.id));
@@ -102,4 +81,50 @@ READ.md is generated once per 24 hours and automatically updated.
 struct User {
     id: usize,
     login: String,
+}
+
+async fn fetch_followers(user_name: &str, client: &Client) -> Result<Vec<User>, Box<dyn Error>> {
+    let mut page = 1;
+    let mut followers = vec![];
+    loop {
+        let follower_up_to_100 = client
+            .get(format!(
+                "https://api.github.com/users/{}/followers",
+                user_name
+            ))
+            .query(&[("page", page), ("per_page", 100)])
+            .send()
+            .await?
+            .json::<Vec<User>>()
+            .await?;
+        if follower_up_to_100.is_empty() {
+            break;
+        }
+        followers.extend(follower_up_to_100);
+        page += 1;
+    }
+    Ok(followers)
+}
+
+async fn fetch_followings(user_name: &str, client: &Client) -> Result<Vec<User>, Box<dyn Error>> {
+    let mut page = 1;
+    let mut followers = vec![];
+    loop {
+        let follower_up_to_100 = client
+            .get(format!(
+                "https://api.github.com/users/{}/following",
+                user_name
+            ))
+            .query(&[("page", page), ("per_page", 100)])
+            .send()
+            .await?
+            .json::<Vec<User>>()
+            .await?;
+        if follower_up_to_100.is_empty() {
+            break;
+        }
+        followers.extend(follower_up_to_100);
+        page += 1;
+    }
+    Ok(followers)
 }

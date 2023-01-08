@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: "0 1 * * *"
+    - cron: "*/30 * * * *"
 
 name: github_relationship
 
@@ -11,6 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: echo |  ./bin ${{ github.actor }}
+      - name: Diff
+        id: diff
+        run: |
+          git add -N .
+          git diff --name-only --exit-code
+        continue-on-error: true
       - name: commit README
         run: |
           git config --global user.name "${{ github.actor }}"
@@ -18,3 +24,4 @@ jobs:
           git add README.md
           git commit -m 'update README.md'
           git push origin master
+        if: steps.diff.outcome == 'failure'
