@@ -8,7 +8,7 @@ READ.md is generated once per 24 hours and automatically updated.
  
  # Users who you not follows: 
   
-- [Delta357](https://github.com/Delta357/) 
-- [sheraadams](https://github.com/sheraadams/) 
 - [HyunCafe](https://github.com/HyunCafe/) 
+- [sheraadams](https://github.com/sheraadams/) 
+- [Delta357](https://github.com/Delta357/) 
 - [koyama-vtlz](https://github.com/koyama-vtlz/) 
