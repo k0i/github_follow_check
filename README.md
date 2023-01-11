@@ -8,6 +8,6 @@ READ.md is generated once per 24 hours and automatically updated.
  
  # Users who you not follows: 
   
-- [HyunCafe](https://github.com/HyunCafe/) 
-- [koyama-vtlz](https://github.com/koyama-vtlz/) 
 - [Delta357](https://github.com/Delta357/) 
+- [koyama-vtlz](https://github.com/koyama-vtlz/) 
+- [HyunCafe](https://github.com/HyunCafe/) 
