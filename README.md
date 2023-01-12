@@ -10,7 +10,3 @@ READ.md is generated once per 24 hours and automatically updated.
   
 - [koyama-vtlz](https://github.com/koyama-vtlz/) 
 - [lucky7123](https://github.com/lucky7123/) 
-# Users who not follows you 
-  
-- [HyunCafe](https://github.com/HyunCafe/) 
- 
