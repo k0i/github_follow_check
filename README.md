@@ -10,3 +10,4 @@ READ.md is generated once per 24 hours and automatically updated.
   
 - [kazunetakeda25](https://github.com/kazunetakeda25/) 
 - [koyama-vtlz](https://github.com/koyama-vtlz/) 
+- [diorfunn](https://github.com/diorfunn/) 
