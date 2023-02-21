@@ -8,9 +8,9 @@ READ.md is generated once per 24 hours and automatically updated.
  
  # Users who you not follows: 
   
-- [Solomonkassa](https://github.com/Solomonkassa/) 
-- [koyama-vtlz](https://github.com/koyama-vtlz/) 
 - [aldrin112602](https://github.com/aldrin112602/) 
+- [koyama-vtlz](https://github.com/koyama-vtlz/) 
+- [Solomonkassa](https://github.com/Solomonkassa/) 
 # Users who not follows you 
   
 - [Kwynto](https://github.com/Kwynto/) 
