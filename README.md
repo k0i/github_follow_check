@@ -8,8 +8,8 @@ READ.md is generated once per 24 hours and automatically updated.
  
  # Users who you not follows: 
   
-- [SacredShiner](https://github.com/SacredShiner/) 
 - [Solomonkassa](https://github.com/Solomonkassa/) 
+- [SacredShiner](https://github.com/SacredShiner/) 
 - [aldrin112602](https://github.com/aldrin112602/) 
 - [koyama-vtlz](https://github.com/koyama-vtlz/) 
 # Users who not follows you 
