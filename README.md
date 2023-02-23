@@ -11,5 +11,6 @@ READ.md is generated once per 24 hours and automatically updated.
 - [koyama-vtlz](https://github.com/koyama-vtlz/) 
 # Users who not follows you 
   
-- [Golugauraw1](https://github.com/Golugauraw1/) 
+- [dxp10](https://github.com/dxp10/) 
+ - [Golugauraw1](https://github.com/Golugauraw1/) 
  
