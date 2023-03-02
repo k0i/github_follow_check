@@ -12,6 +12,6 @@ READ.md is generated once per 24 hours and automatically updated.
 - [koyama-vtlz](https://github.com/koyama-vtlz/) 
 # Users who not follows you 
   
-- [dinosaurtirex](https://github.com/dinosaurtirex/) 
- - [bylickilabs](https://github.com/bylickilabs/) 
+- [bylickilabs](https://github.com/bylickilabs/) 
+ - [dinosaurtirex](https://github.com/dinosaurtirex/) 
  
