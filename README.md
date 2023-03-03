@@ -8,10 +8,4 @@ READ.md is generated once per 24 hours and automatically updated.
  
  # Users who you not follows: 
   
-- [Spartanlasergun](https://github.com/Spartanlasergun/) 
 - [koyama-vtlz](https://github.com/koyama-vtlz/) 
-# Users who not follows you 
-  
-- [dinosaurtirex](https://github.com/dinosaurtirex/) 
- - [bylickilabs](https://github.com/bylickilabs/) 
- 
