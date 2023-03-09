@@ -8,5 +8,5 @@ READ.md is generated once per 24 hours and automatically updated.
  
  # Users who you not follows: 
   
-- [vjanz](https://github.com/vjanz/) 
 - [koyama-vtlz](https://github.com/koyama-vtlz/) 
+- [vjanz](https://github.com/vjanz/) 
