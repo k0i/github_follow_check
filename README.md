@@ -8,6 +8,6 @@ READ.md is generated once per 24 hours and automatically updated.
  
  # Users who you not follows: 
   
+- [Rider-io](https://github.com/Rider-io/) 
 - [koyama-vtlz](https://github.com/koyama-vtlz/) 
 - [mahedialikhorjiya](https://github.com/mahedialikhorjiya/) 
-- [Rider-io](https://github.com/Rider-io/) 
